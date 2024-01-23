@@ -8,3 +8,13 @@ pub fn init_app() {
     // Default utilities - feel free to customize
     flutter_rust_bridge::setup_default_user_utils();
 }
+
+pub enum EnumTest {
+    A,
+    B,
+    C(String),
+}
+
+pub fn foo() -> EnumTest {
+    EnumTest::C("S".to_owned())
+}
